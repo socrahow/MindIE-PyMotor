@@ -217,7 +217,7 @@ def send_request(json_data: Dict[str, Any], proxy_url:str = "http://127.0.0.1:10
 
 def main():
     parser = argparse.ArgumentParser(
-        description="VLLM 负载均衡代理配置生成器"
+        description="VLLM 负载均衡代理配置生成器",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
         示例：
