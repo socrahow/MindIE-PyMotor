@@ -47,7 +47,7 @@ MindIE 系列 TC/SIG 会议安排，请查看 [Ascend会议中心](https://meeti
 
 **快速入门**：快速体验启动服务、接口调用、精度&性能测试和停止服务全流程，请参见[快速入门](./docs/zh/user_guide/quick_start.md)。
 
-**服务部署**：PD 分离部署请参见[PD 分离服务部署](./docs/zh/user_guide/service_deployment/pd_disaggregation_deployment.md)，PD 混部部署请参见[PD 混部服务部署](./docs/zh/user_guide/service_deployment/pd_hybrid_deployment.md)，单独调用coordinate部署请参见[单独Coordinator部署](./docs/zh/user_guide/service_deployment/Coordinator_deployment.md)。
+**服务部署**：PD 分离部署请参见[PD 分离服务部署](./docs/zh/user_guide/service_deployment/pd_disaggregation_deployment.md)，PD 混部部署请参见[PD 混部服务部署](./docs/zh/user_guide/service_deployment/pd_hybrid_deployment.md)，单独调用coordinate部署请参见[单独Coordinator部署](./docs/zh/user_guide/service_deployment/coordinator_deployment.md)。
 
 # 问题反馈
 
