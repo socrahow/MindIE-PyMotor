@@ -57,3 +57,11 @@ from motor.coordinator.domain.scheduling import (
     SchedulingFacade,
     UpdateWorkloadParams,
 )
+from motor.coordinator.domain.agent_hint import (
+    AgentHintInfo,
+    CacheControl,
+    ContextManagement,
+    LatencyControl,
+    PriorityControl,
+    parse_agent_hint,
+)

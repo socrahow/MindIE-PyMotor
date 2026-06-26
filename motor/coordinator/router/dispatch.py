@@ -28,6 +28,7 @@ from fastapi.responses import StreamingResponse, JSONResponse
 import httpx
 
 from motor.config.coordinator import CoordinatorConfig, DeployMode
+from motor.coordinator.domain.agent_hint import parse_agent_hint
 from motor.coordinator.models.constants import OpenAIField
 from motor.coordinator.models.request import RequestInfo
 from motor.coordinator.domain import InstanceReadiness
@@ -284,6 +285,11 @@ async def __create_request_info(
         request_json.get("return_token_ids", False)
     )
 
+    agent_hint_info = parse_agent_hint(
+        request_json,
+        headers=dict(raw_request.headers),
+    )
+
     return RequestInfo(
         req_id=req_id,
         req_data=req_data,
@@ -291,4 +297,5 @@ async def __create_request_info(
         req_len=req_len,
         entry_api=api,
         client_expects_chat_shape=(OpenAIField.MESSAGES in request_json),
+        agent_hint_info=agent_hint_info,
     )

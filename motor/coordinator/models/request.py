@@ -18,6 +18,7 @@ import anyio
 
 from motor.common.resources.instance import PDRole
 from motor.coordinator.tracer.tracing import TraceObj
+from motor.coordinator.domain.agent_hint import AgentHintInfo
 
 
 class RequestType(Enum):
@@ -75,6 +76,10 @@ class RequestInfo(BaseModel):
     _d_cancel_scope: anyio.CancelScope | None = PrivateAttr(default=None)
     _e_cancel_scope: anyio.CancelScope | None = PrivateAttr(default=None)
     prompt_tokens_details: dict = Field(default={}, description="prefill prompt_tokens_details")
+    agent_hint_info: AgentHintInfo = Field(
+        default_factory=AgentHintInfo,
+        description="从请求 agent_hint 解析的结构化信息，供 Scheduler 使用",
+    )
 
     def __init__(self, **data):
         super().__init__(**data)
